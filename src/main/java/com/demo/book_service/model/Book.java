@@ -2,10 +2,7 @@ package com.demo.book_service.model;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 
 @Entity
+@Table(name ="book")
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +22,5 @@ public class Book {
 	private LocalDate bookPublished;
 	private String bookImageUrl;
 	private String bookAuthurId;
+	private Long id1;
 }
